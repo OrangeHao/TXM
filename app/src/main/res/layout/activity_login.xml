@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.txmpay.ewallet.ui.account.LoginActivity">
+
+    <ImageView
+        android:id="@+id/return_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/activity_horizontal_margin"
+        android:src="@drawable/base_icon_return"
+        />
+
+    <ImageView
+        android:id="@+id/avatarImg"
+        android:layout_width="@dimen/activity_avatar_size4"
+        android:layout_height="@dimen/activity_avatar_size4"
+        android:layout_marginTop="@dimen/space16"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/account_icon_avatar" />
+
+    <LinearLayout
+        style="@style/BtnStrokeStyle"
+        android:gravity="center_vertical"
+        android:layout_marginTop="@dimen/space30"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:layout_marginLeft="@dimen/activity_vertical_margin"
+        android:layout_marginRight="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/space20"
+        android:paddingRight="@dimen/space20"
+        >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/account_icon_user"/>
+
+        <com.txmpay.ewallet.widget.NormalEditText
+            android:id="@+id/phoneEdit"
+            style="@style/EditMobileNumberStyle"
+            android:paddingLeft="@dimen/space08"
+            app:ic_delete="@drawable/icon_delete"
+            android:hint="@string/account_input_phone_num"
+            android:maxLength="11"
+            android:textSize="@dimen/font16" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        style="@style/BtnStrokeStyle"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:layout_marginLeft="@dimen/activity_vertical_margin"
+        android:layout_marginRight="@dimen/activity_vertical_margin"
+        android:layout_marginTop="@dimen/space20"
+        android:paddingLeft="@dimen/space20"
+        android:paddingRight="@dimen/space20"
+        >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/account_icon_pw"/>
+
+        <com.txmpay.ewallet.widget.NormalEditText
+            android:id="@+id/pwEdit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:ic_delete="@drawable/icon_delete"
+            android:background="@null"
+            android:hint="@string/account_input_pw"
+            android:inputType="textPassword"
+            android:paddingLeft="@dimen/space08"
+            android:textSize="@dimen/font16" />
+
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/loginBtn"
+        style="@style/BtnColorStyle"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:layout_marginLeft="@dimen/activity_vertical_margin"
+        android:layout_marginRight="@dimen/activity_vertical_margin"
+        android:layout_marginTop="@dimen/space20"
+        android:text="@string/account_login"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font18" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/space20"
+        android:paddingRight="@dimen/space20">
+
+        <TextView
+            android:id="@+id/registerTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/textDefualt3"
+            android:clickable="true"
+            android:textSize="@dimen/text_size_normal"
+            android:text="@string/account_regist_new_user"/>
+
+        <TextView
+            android:id="@+id/forgetPwdTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/textDefualt3"
+            android:textSize="@dimen/text_size_normal"
+            android:layout_alignParentRight="true"
+            android:clickable="true"
+            android:text="@string/account_forget_pw" />
+
+    </RelativeLayout>
+
+</LinearLayout>

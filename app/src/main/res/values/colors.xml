@@ -1,10 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
+    <color name="colorPrimary">#3b84f3</color>
+    <color name="colorPrimaryDark">#3b84f3</color>
+    <color name="colorAccent">#3b84f3</color>
+    <!--<color name="colorAccent">#FF4081</color>-->
+
+    <color name="colorPrimary2">#efefef</color>
+
+    <color name="colorPrimaryLight">#3b64f3</color>
 
     <color name="transparent">#00000000</color>
+
+    <color name="bg_noamal">#f7f7f7</color>
     <!-- 背景颜色-->
     <color name="windowBackground">#f6f6f6</color>
     <color name="itemBackgroud">#ffffff</color>
@@ -20,9 +27,20 @@
     <color name="titleTextSelect">#80ffffff</color>
     <!-- 线的颜色-->
     <color name="line">#cccccc</color>
+    <color name="line2">#eaeaea</color>
     <!-- 白色 -->
     <color name="white">#ffffffff</color>
     <color name="transwhite">#80ffffff</color>
     <color name="bg_normal_gray">#f6f6f6</color>
+    
+    <color name="home_menu_blue">#d8f4f4</color>
+    <color name="home_menu_blue_text">#0497dc</color>
+    <color name="home_menu_blue_press">#d1f4f4</color>
+    <color name="home_menu_purple">#f0e8f9</color>
+    <color name="home_menu_purple_text">#995378</color>
+    <color name="home_menu_purple_press">#f0e0f9</color>
+    <color name="home_menu_red">#fceadd</color>
+    <color name="home_menu_red_text">#e27532</color>
+    <color name="home_menu_red_press">#fcead1</color>
 
 </resources>

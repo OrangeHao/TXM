@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/home_menu_item_max_height"
+    android:paddingLeft="@dimen/space12"
+    android:paddingRight="@dimen/space12"
+    >
+
+    <LinearLayout
+        android:id="@+id/home_menu_wallet"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:background="@drawable/home_menu_bg_selector_blue"
+        >
+
+        <ImageView
+            android:layout_width="@dimen/home_menu_icon_large_height"
+            android:layout_height="@dimen/home_menu_icon_large_height"
+            android:src="@drawable/home_menu_icon_wallet"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_size_large"
+            android:layout_marginTop="@dimen/space10"
+            android:textColor="@color/home_menu_blue_text"
+            android:text="@string/home_my_wallet"
+            />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/space12"
+        android:orientation="vertical"
+        >
+
+        <LinearLayout
+            android:id="@+id/home_menu_route_plan"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:background="@drawable/home_menu_bg_selector_red"
+            >
+
+            <ImageView
+                android:layout_width="@dimen/home_menu_icon_small_height"
+                android:layout_height="@dimen/home_menu_icon_small_height"
+                android:src="@drawable/home_menu_icon_route_plan"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_size_title"
+                android:layout_marginTop="@dimen/space10"
+                android:textColor="@color/home_menu_red_text"
+                android:text="@string/home_route_plan"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/home_menu_take_bus"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/space12"
+            android:background="@drawable/home_menu_bg_selector_purple"
+            >
+
+            <ImageView
+                android:layout_width="@dimen/home_menu_icon_small_height"
+                android:layout_height="@dimen/home_menu_icon_small_height"
+                android:src="@drawable/home_menu_icon_bus"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_size_title"
+                android:layout_marginTop="@dimen/space10"
+                android:textColor="@color/home_menu_purple_text"
+                android:text="@string/home_bus"
+                />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

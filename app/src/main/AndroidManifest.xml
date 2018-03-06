@@ -2,7 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.txmpay.ewallet">
 
-
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
@@ -37,10 +36,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".ui.main.MainActivity"
-            android:label="@string/app_name">
-        </activity>
-
+            android:name=".ui.main.MainctivityTest"
+            android:label="@string/app_name" />
         <activity android:name=".ui.TestActivity" />
         <activity android:name=".ui.main.SplashActivity">
             <intent-filter>
@@ -49,6 +46,33 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".ui.main.MainActivity" />
+
+        <!-- 支付 -->
+        <activity
+            android:name=".wxapi.WXPayEntryActivity"
+            android:exported="true"
+            android:launchMode="singleTop" />
+        <!-- 分享 -->
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="561cae6ae0f55abd990035bf" />
+
+        <activity
+            android:name=".ui.account.LoginActivity"
+            android:theme="@style/LightAppTheme" />
+        <activity android:name=".ui.account.RegistActivity" />
+        <activity android:name=".ui.account.ResetPwActivity" />
+        <activity android:name=".ui.account.safe.SafeSettingActivity" />
+        <activity android:name=".ui.account.safe.ResetPhoneNumActivity" />
+        <activity android:name=".ui.account.safe.BindNewPhoneActivity"></activity>
     </application>
 
 </manifest>

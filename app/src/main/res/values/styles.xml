@@ -5,9 +5,18 @@
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorAccent">@color/colorPrimary</item>
+
+        <!-- APP默认字体颜色-->
+        <item name="android:textColor">@color/textDefualt</item>
+        <!-- APP默认字体大小-->
+        <item name="android:textSize">@dimen/text_size_title</item>
 
         <item name="android:windowAnimationStyle">@style/activityAnimation</item>
+    </style>
+
+    <style name="LightAppTheme" parent="AppTheme">
+        <item name="colorPrimaryDark">@color/colorPrimary2</item>
     </style>
 
 
@@ -17,6 +26,46 @@
         <item name="android:activityOpenExitAnimation">@anim/slide_left_out</item>
         <item name="android:activityCloseEnterAnimation">@anim/slide_left_in</item>
         <item name="android:activityCloseExitAnimation">@anim/slide_right_out</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="NavigationDrawerStyle">
+        <item name="android:textSize">16sp</item>
+        <item name="android:listPreferredItemHeightSmall">50dp</item>
+        <item name="listPreferredItemHeightSmall">50dp</item>
+    </style>
+
+    <style name="BtnStrokeStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/btn_normal_height</item>
+        <item name="android:background">@drawable/shape_normal_btn_bg_stroke</item>
+    </style>
+
+    <style name="BtnColorStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/btn_normal_height</item>
+        <item name="android:background">@drawable/selector_normal_color_blue_btn</item>
+    </style>
+
+
+    <!-- 手机号码-->
+    <style name="EditMobileNumberStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@null</item>
+        <item name="android:inputType">phone</item>
+        <item name="android:maxLength">11</item>
+    </style>
+
+    <style name="ArrowItemLayoutStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/selector_item_background</item>
+        <item name="android:clickable">true</item>
+        <item name="android:padding">@dimen/activity_vertical_margin</item>
     </style>
 
 </resources>

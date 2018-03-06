@@ -4,11 +4,9 @@ import android.Manifest;
 import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AlertDialog;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.Toast;
 
-import com.bumptech.glide.Glide;
 import com.txmpay.ewallet.R;
 import com.txmpay.ewallet.base.BaseActivity;
 import com.txmpay.ewallet.utils.TaskScheduler.TaskScheduler;
@@ -36,8 +34,10 @@ public class SplashActivity extends BaseActivity {
     }
 
 
-
-
+    @Override
+    protected boolean includeAppBar() {
+        return false;
+    }
 
     @NeedsPermission({Manifest.permission.WRITE_EXTERNAL_STORAGE})
     void startMainActivity() {
@@ -46,7 +46,7 @@ public class SplashActivity extends BaseActivity {
                     startActivity(new Intent(SplashActivity.this, MainActivity.class));
                     finish();
                 }
-            ,2000);
+            ,100);
 
     }
 

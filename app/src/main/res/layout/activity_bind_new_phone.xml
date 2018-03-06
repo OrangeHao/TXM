@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.txmpay.ewallet.ui.account.LoginActivity">
+
+    <include layout="@layout/appbar_layout"></include>
+
+
+    <RelativeLayout
+        android:id="@+id/changePhoneGridLayout"
+        style="@style/ArrowItemLayoutStyle"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        >
+
+        <TextView
+            android:id="@+id/phone_num_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="@dimen/space70"
+            android:layout_centerVertical="true"
+            android:text="@string/account_safe_phone_num"
+            android:textSize="@dimen/font16" />
+
+
+        <com.txmpay.ewallet.widget.NormalEditText
+            android:id="@+id/phoneNumEdt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/phone_num_text"
+            android:layout_marginLeft="@dimen/space10"
+            app:ic_delete="@drawable/icon_delete"
+            android:background="@null"
+            android:hint="@string/account_input_phone_num"
+            android:inputType="number"
+            android:paddingLeft="@dimen/space08"
+            android:textSize="@dimen/font16" />
+
+    </RelativeLayout>
+
+    <include layout="@layout/layout_line" />
+
+    <RelativeLayout
+        style="@style/ArrowItemLayoutStyle"
+        >
+
+        <TextView
+            android:id="@+id/reset_pw_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:minWidth="@dimen/space70"
+            android:text="@string/account_safe_verification_code"
+            android:textSize="@dimen/font16" />
+
+
+        <TextView
+            android:id="@+id/send_vf_code_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_send_vf_code"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:paddingBottom="@dimen/space04"
+            android:paddingTop="@dimen/space04"
+            android:paddingLeft="@dimen/space12"
+            android:paddingRight="@dimen/space12"
+            android:text="@string/account_send_vf_code"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/text_size_normal"
+            />
+
+        <com.txmpay.ewallet.widget.NormalEditText
+            android:id="@+id/verificationCodeEdit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/reset_pw_text"
+            android:layout_toLeftOf="@id/send_vf_code_txt"
+            android:layout_marginLeft="@dimen/space10"
+            android:layout_marginRight="@dimen/space10"
+            app:ic_delete="@drawable/icon_delete"
+            android:background="@null"
+            android:hint="@string/account_input_verification_code"
+            android:inputType="number"
+            android:paddingLeft="@dimen/space08"
+            android:textSize="@dimen/font16" />
+    </RelativeLayout>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/activity_vertical_margin"
+        android:textSize="@dimen/text_size_small"
+        android:text="@string/account_safe_bing_new_phone_tips"
+        android:textColor="@color/textDefualt3" />
+
+    <Button
+        android:id="@+id/putRequest_btn"
+        style="@style/BtnColorStyle"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:layout_marginLeft="@dimen/activity_vertical_margin"
+        android:layout_marginRight="@dimen/activity_vertical_margin"
+        android:layout_marginTop="@dimen/space20"
+        android:text="@string/account_put"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font18" />
+
+</LinearLayout>

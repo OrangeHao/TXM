@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group
+        >
+        <item
+            android:id="@+id/nav_card"
+            android:icon="@drawable/home_icon_card"
+            android:title="@string/home_menu_my_card" />
+        <item
+            android:id="@+id/nav_safe_setting"
+            android:icon="@drawable/home_icon_safe"
+            android:title="@string/home_menu_safe_setting" />
+        <item
+            android:id="@+id/nav_clear"
+            android:icon="@drawable/home_icon_clear"
+            android:title="@string/home_menu_clear" />
+        <item
+            android:id="@+id/nav_share"
+            android:icon="@drawable/home_icon_share"
+            android:title="@string/home_menu_share" />
+
+        <item
+            android:id="@+id/nav_about"
+            android:icon="@drawable/home_icon_about"
+            android:title="@string/home_menu_about" />
+
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@drawable/home_icon_logout"
+            android:title="@string/home_menu_logout" />
+    </group>
+
+    <!--<item android:title="Communicate">-->
+        <!--<menu>-->
+            <!--<item-->
+                <!--android:id="@+id/nav_share"-->
+                <!--android:icon="@drawable/ic_menu_share"-->
+                <!--android:title="Share" />-->
+            <!--<item-->
+                <!--android:id="@+id/nav_send"-->
+                <!--android:icon="@drawable/ic_menu_send"-->
+                <!--android:title="Send" />-->
+        <!--</menu>-->
+    <!--</item>-->
+
+</menu>

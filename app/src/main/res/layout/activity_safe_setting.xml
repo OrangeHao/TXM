@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.txmpay.ewallet.ui.account.LoginActivity">
+
+    <include layout="@layout/appbar_layout"></include>
+
+
+    <RelativeLayout
+        android:id="@+id/changePhoneLayout"
+        style="@style/ArrowItemLayoutStyle"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/account_safe_change_phone_num"
+            android:textSize="@dimen/font16" />
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/base_right_arrow"
+            />
+    </RelativeLayout>
+
+    <include layout="@layout/layout_line" />
+
+    <RelativeLayout
+        android:id="@+id/changePwLayout"
+        style="@style/ArrowItemLayoutStyle"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/account_safe_reset_pw"
+            android:textSize="@dimen/font16" />
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/base_right_arrow"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/paySafeLayout"
+        style="@style/ArrowItemLayoutStyle"
+        android:layout_marginTop="@dimen/activity_vertical_margin">
+
+        <TextView
+            android:id="@+id/safe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/account_safe_pay_safe"
+            android:textSize="@dimen/font16" />
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/base_right_arrow"
+            />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/safe"
+            android:layout_marginTop="@dimen/space04"
+            android:layout_marginRight="@dimen/space30"
+            android:textSize="@dimen/text_size_small"
+            android:text="@string/account_safe_pay_safe_desc"
+            android:textColor="@color/textDefualt3" />
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/activity_vertical_margin"
+        android:textSize="@dimen/text_size_small"
+        android:text="@string/account_safe_suggest"
+        android:textColor="@color/textDefualt3" />
+
+</LinearLayout>

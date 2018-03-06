@@ -30,7 +30,7 @@ ext {
     // Support library and architecture components support minSdk 14 and above.
     compileSdkVersion = 27
     buildToolsVersion = '27.0.2'
-    minSdkVersion = 21
+    minSdkVersion = 19
     targetSdkVersion = 27
 
     // App dependencies
@@ -38,5 +38,5 @@ ext {
     butterknifeVersion= '8.8.1'
     permissionVersion= '3.1.0'
     glideVersion= '4.6.1'
-
+    eventbusVersion='3.1.1'
 }

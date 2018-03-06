@@ -1,6 +1,8 @@
 package com.txmpay.ewallet.base;
 
 import android.content.Context;
+import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.AppBarLayout;
@@ -10,6 +12,7 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.txmpay.ewallet.R;
+import com.umeng.analytics.MobclickAgent;
 
 import butterknife.ButterKnife;
 
@@ -31,6 +34,8 @@ public abstract class BaseActivity<V,T extends BasePresenter> extends AppCompatA
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+
         initBeforeSetContentView();
 
         mPresenter=createPresenter();
@@ -47,6 +52,18 @@ public abstract class BaseActivity<V,T extends BasePresenter> extends AppCompatA
         initView();
         initData();
         initListner();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        MobclickAgent.onResume(this);
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        MobclickAgent.onPause(this);
     }
 
     @Override
@@ -112,15 +129,24 @@ public abstract class BaseActivity<V,T extends BasePresenter> extends AppCompatA
 
 
     protected void showReturnBtn(){
-        mToolBar.setNavigationIcon(R.drawable.icon_return);
+        mToolBar.setNavigationIcon(R.drawable.base_icon_return_white);
+    }
+
+    protected void showReturnBtn(int drawableID){
+        mToolBar.setNavigationIcon(drawableID);
     }
 
     protected void hideReturnBtn(){
         mToolBar.setNavigationIcon(null);
     }
 
+
     protected void setBarTitle(int stringId){
         mTitle.setText(stringId);
+    }
+    protected void setBarLeftTitle(int stringId){
+        mToolBar.setTitle(stringId);
+        mToolBar.setTitleTextColor(getResources().getColor(R.color.white));
     }
     protected void setBarTitle(String title){
         mTitle.setText(title);
@@ -130,6 +156,10 @@ public abstract class BaseActivity<V,T extends BasePresenter> extends AppCompatA
     }
     protected String getBarTitle(){
         return mTitle.getText().toString();
+    }
+
+    protected void setBarColor(int colorId){
+        mToolBar.setBackgroundColor(getResources().getColor(colorId));
     }
 
     protected void showRightText(String text){
@@ -154,4 +184,13 @@ public abstract class BaseActivity<V,T extends BasePresenter> extends AppCompatA
 
     /**--------------------------------------------**/
 
+
+    public void jumpToActivity(Intent intent) {
+        startActivity(intent);
+    }
+
+    public void jumpToActivity(Class activity) {
+        Intent intent = new Intent(this, activity);
+        startActivity(intent);
+    }
 }
