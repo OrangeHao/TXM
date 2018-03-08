@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
+import com.lms.support.widget.YiLoadingDialog;
 import com.txmpay.ewallet.R;
 import com.txmpay.ewallet.base.BaseActivity;
 
@@ -15,6 +16,7 @@ public class TestActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        YiLoadingDialog.show(this);
     }
 
     @Override

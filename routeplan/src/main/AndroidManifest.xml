@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="routeplan">
+
+    <application
+        android:allowBackup="true"
+        android:label="@string/app_name"
+        android:supportsRtl="true">
+
+        <!-- 高德地图key -->
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="aa6ea74c41720bb6fcbdaab7660c46d1" />
+        <!-- 定位需要的服务 -->
+        <service android:name="com.amap.api.location.APSService" />
+
+        <activity android:name=".RoutePlanActivity"></activity>
+        <activity android:name=".pickpoi.PoiSearchActivity"></activity>
+        <activity android:name=".pickpoi.SelectPoiFromMapActivity"></activity>
+        <activity android:name=".busresult.BusRouteResultActivity"></activity>
+    </application>
+
+</manifest>

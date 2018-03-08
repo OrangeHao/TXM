@@ -181,6 +181,17 @@ public abstract class BaseActivity<V,T extends BasePresenter> extends AppCompatA
         return mToolBar;
     }
 
+    protected void setToolBarScrollEnable(boolean scroll){
+        AppBarLayout.LayoutParams params =
+                (AppBarLayout.LayoutParams) mToolBar.getLayoutParams();
+        if (scroll){
+            params.setScrollFlags(AppBarLayout.LayoutParams.SCROLL_FLAG_SCROLL
+                    | AppBarLayout.LayoutParams.SCROLL_FLAG_ENTER_ALWAYS);
+        }else {
+            params.setScrollFlags(0);
+        }
+    }
+
 
     /**--------------------------------------------**/
 

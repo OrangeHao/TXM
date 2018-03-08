@@ -160,3 +160,11 @@ public static final int *;
 -keep class com.tencent.mm.sdk.** {*;}
 
 # --------------------------------------------------------------------------
+
+
+
+#agentWeb
+-keep class com.just.agentweb.** {
+    *;
+}
+-dontwarn com.just.agentweb.**

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/selector_color_bg_white_gray"
+    android:clickable="true"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/space20"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp">
+
+    <TextView
+        android:id="@+id/historyTxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="&#xe60b; 香洲总站 &#xe61f; 吉大总站"
+        android:textColor="@color/textDefualt2"
+        android:textSize="@dimen/font16" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/line"></View>
+</LinearLayout>

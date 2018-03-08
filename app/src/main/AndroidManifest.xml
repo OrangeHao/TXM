@@ -72,7 +72,10 @@
         <activity android:name=".ui.account.ResetPwActivity" />
         <activity android:name=".ui.account.safe.SafeSettingActivity" />
         <activity android:name=".ui.account.safe.ResetPhoneNumActivity" />
-        <activity android:name=".ui.account.safe.BindNewPhoneActivity"></activity>
+        <activity android:name=".ui.account.safe.BindNewPhoneActivity" />
+        <activity
+            android:name=".ui.webview.BaseWebviewActivity">
+        </activity>
     </application>
 
 </manifest>

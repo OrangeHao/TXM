@@ -19,6 +19,7 @@ import com.txmpay.ewallet.R;
 import com.txmpay.ewallet.base.BaseActivity;
 import com.txmpay.ewallet.ui.account.LoginActivity;
 import com.txmpay.ewallet.ui.account.safe.SafeSettingActivity;
+import com.txmpay.ewallet.ui.webview.BaseWebviewActivity;
 import com.youth.banner.Banner;
 import com.youth.banner.BannerConfig;
 import com.youth.banner.Transformer;
@@ -30,6 +31,7 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.OnClick;
 import cn.bingoogolapple.badgeview.BGABadgeImageView;
+import routeplan.RoutePlanActivity;
 
 public class MainActivity extends BaseActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -189,8 +191,10 @@ public class MainActivity extends BaseActivity
             case R.id.home_menu_wallet:
                 break;
             case R.id.home_menu_route_plan:
+                jumpToActivity(RoutePlanActivity.class);
                 break;
             case R.id.home_menu_take_bus:
+                jumpToActivity(BaseWebviewActivity.class);
                 break;
         }
     }
