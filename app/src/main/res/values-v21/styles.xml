@@ -1,1 +1,8 @@
-<resources></resources>
+<resources>
+
+    <!--<style name="activityAnimation" parent="@android:style/Animation">-->
+        <!--<item name="android:windowExitTransition">@transition/slide_left</item>-->
+        <!--<item name="android:windowEnterAnimation">@transition/slide_left</item>-->
+        <!--<item name="android:windowReenterTransition">@transition/slide_left</item>-->
+    <!--</style>-->
+</resources>

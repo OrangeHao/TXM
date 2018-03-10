@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorAccent"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+
+    <include
+        android:id="@+id/appbar_layout"
+        layout="@layout/appbar_layout"></include>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/appbar_layout"
+        android:layout_above="@id/qr_recharge_layout"
+        android:layout_marginBottom="@dimen/space10"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="@dimen/space20"
+        android:layout_marginRight="@dimen/space20"
+        android:background="@drawable/shape_bg_white"
+        >
+
+        <TextView
+            android:id="@+id/qr_balance_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/space08"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            tools:text="余额：88元"
+            android:textSize="@dimen/font18" />
+
+        <com.txmpay.ewallet.widget.TicketView
+            android:id="@+id/ticketView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space08"
+            android:layout_marginBottom="@dimen/space08"
+            android:layout_above="@id/qr_balance_text"
+            app:ballColor="@color/colorPrimary"
+            app:ballRadius="@dimen/space10"
+            app:lineType="rectangle"
+            app:dashWidth="5dp"
+            app:dashGap="5dp"
+            app:lineHeight="1dp"
+            app:lineColor="@color/line"/>
+
+        <TextView
+            android:id="@+id/qrTip2Txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_above="@id/ticketView"
+            android:gravity="center"
+            android:paddingLeft="@dimen/space08"
+            android:paddingRight="@dimen/space08"
+            android:text="@string/home_qr_tip2"
+            android:textSize="@dimen/text_size_small"
+            android:textColor="@color/textDefualt3" />
+
+        <TextView
+            android:id="@+id/nameTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="25dp"
+            tools:text="王小而"
+            android:textSize="@dimen/font16" />
+
+        <TextView
+            android:id="@+id/cityTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space04"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/nameTxt"
+            tools:text="珠海，普通卡"
+            android:textColor="@color/textDefualt2" />
+
+        <ImageView
+            android:id="@+id/qrImg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/space20"
+            android:layout_marginRight="@dimen/space20"
+            android:layout_below="@id/cityTxt"
+            android:layout_above="@id/qrTip2Txt"
+            android:clickable="true" />
+
+
+    </RelativeLayout>
+
+
+    <ImageView
+        android:id="@+id/avatarImg"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_below="@id/appbar_layout"
+        android:src="@drawable/account_icon_avatar"
+        android:layout_centerHorizontal="true"
+        />
+
+
+    <LinearLayout
+        android:id="@+id/qr_recharge_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_above="@id/scanTipTxt"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/space30"
+        android:layout_marginBottom="@dimen/space10"
+        android:layout_gravity="right"
+        android:paddingLeft="@dimen/space20"
+        android:paddingRight="@dimen/space20"
+        android:paddingTop="@dimen/space05"
+        android:paddingBottom="@dimen/space05"
+        android:background="@drawable/shape_bg_white_recharge"
+        android:gravity="center"
+        >
+
+        <ImageView
+            android:layout_width="@dimen/space22"
+            android:layout_height="@dimen/space22"
+            android:src="@drawable/home_icon_yuan"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/space08"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/font16"
+            android:text="@string/home_recharge"/>
+
+    </LinearLayout>
+
+
+
+    <TextView
+        android:id="@+id/scanTipTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:padding="@dimen/activity_vertical_margin"
+        android:text="@string/home_qr_tip3"
+        android:textColor="@color/selector_title_text"
+        android:textSize="@dimen/font16" />
+
+</RelativeLayout>

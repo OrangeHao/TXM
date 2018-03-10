@@ -38,6 +38,7 @@
     <dimen name="space13">13dp</dimen>
     <dimen name="space16">16dp</dimen>
     <dimen name="space20">20dp</dimen>
+    <dimen name="space22">22dp</dimen>
     <dimen name="space24">24dp</dimen>
     <dimen name="space30">30dp</dimen>
     <dimen name="space40">40dp</dimen>

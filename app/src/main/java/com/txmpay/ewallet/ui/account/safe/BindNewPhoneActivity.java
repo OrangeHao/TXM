@@ -30,7 +30,6 @@ public class BindNewPhoneActivity extends BaseActivity {
 
     @Override
     protected void initView() {
-        showReturnBtn();
         setBarTitle(R.string.account_safe_bind_new_phone);
     }
 

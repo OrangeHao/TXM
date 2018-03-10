@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/appbar_layout"></include>
+
+    <include
+        layout="@layout/base_empty_layout_with_viewgroup"></include>
+
+    <Button
+        android:id="@+id/applyCardBtn"
+        style="@style/BtnColorStyle"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/space50"
+        android:layout_marginLeft="@dimen/activity_vertical_margin"
+        android:layout_marginRight="@dimen/activity_vertical_margin"
+        android:text="@string/card_apply"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font18" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:layout_marginLeft="@dimen/space20"
+        android:layout_marginRight="@dimen/space20"
+        android:visibility="gone"
+        />
+
+</RelativeLayout>

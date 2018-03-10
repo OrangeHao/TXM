@@ -25,6 +25,14 @@
     <string name="home_menu_share">推荐给好友</string>
     <string name="home_menu_about">关于</string>
     <string name="home_menu_logout">退出登录</string>
+    <string name="home_refresh">刷新</string>
+    <string name="home_qr_tip1">扫描时请将二维码置于刷卡机正下方10厘米处</string>
+    <string name="home_qr_tip2">每分钟自动刷新,连续使用请点击刷新二维码</string>
+    <string name="home_qr_tip3">扫码须知</string>
+    <string name="home_qr_tip4">1.扫描时请将二维码置于刷卡机正下方10厘米处。</string>
+    <string name="home_qr_tip5">2.若带人乘车，请刷新二维码。</string>
+    <string name="home_recharge">充值</string>
+    <string name="home_message">消息</string>
 
     <string name="account_input_phone_num">请输入手机号</string>
     <string name="account_reset_phone_num">请输入注册的手机号</string>
@@ -49,4 +57,14 @@
     <string name="account_safe_verification_code">验证码</string>
     <string name="account_safe_bing_new_phone_tips">更换成功后，请使用新手机号登录</string>
     <string name="account_safe_change_phone_num">更换手机号</string>
+
+    <string name="card_my_special_card">我的特殊卡</string>
+    <string name="card_apply">申请特殊卡</string>
+    <string name="card_none_tips">您还未申请特殊卡，点击按钮立即申请吧~</string>
+    <string name="card_pay_insurance">支付保险费</string>
+    <string name="card_apply_cancel">取消申请</string>
+    <string name="card_real_name">实名卡</string>
+    <string name="card_expiry_date">有效期：%1$s</string>
+
+    <string name="payment_pay_way">选择支付方式</string>
 </resources>

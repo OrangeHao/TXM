@@ -105,6 +105,7 @@ public abstract class BaseActivity<V,T extends BasePresenter> extends AppCompatA
             mToolBar=(Toolbar)findViewById(R.id.toolbar_layout);
             mTitle=(TextView)findViewById(R.id.appbar_title);
             mRightText=(TextView)findViewById(R.id.appbar_right_text);
+            mToolBar.setNavigationIcon(R.drawable.base_icon_return_white);
             if (enableReturnBtn() && mToolBar!=null){
                 mToolBar.setNavigationOnClickListener(new View.OnClickListener() {
                     @Override

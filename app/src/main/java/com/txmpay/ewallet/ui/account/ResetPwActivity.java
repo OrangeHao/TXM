@@ -31,7 +31,6 @@ public class ResetPwActivity extends BaseActivity {
 
     @Override
     protected void initView() {
-        showReturnBtn();
         setBarTitle(R.string.account_reset_pw);
         setBarTitleColor(getResources().getColor(R.color.white));
     }

@@ -6,7 +6,5 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="@dimen/activity_line_height"
-        android:layout_marginLeft="@dimen/space20"
-        android:layout_marginRight="@dimen/space20"
         android:background="@color/line"></View>
 </merge>

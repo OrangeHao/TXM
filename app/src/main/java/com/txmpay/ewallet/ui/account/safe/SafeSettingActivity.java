@@ -22,7 +22,6 @@ public class SafeSettingActivity extends BaseActivity {
 
     @Override
     protected void initView() {
-        showReturnBtn();
         setBarTitle(R.string.account_safe_setting);
     }
 

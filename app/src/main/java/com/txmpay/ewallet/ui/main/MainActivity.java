@@ -17,8 +17,9 @@ import android.widget.TextView;
 import com.jaeger.library.StatusBarUtil;
 import com.txmpay.ewallet.R;
 import com.txmpay.ewallet.base.BaseActivity;
-import com.txmpay.ewallet.ui.account.LoginActivity;
 import com.txmpay.ewallet.ui.account.safe.SafeSettingActivity;
+import com.txmpay.ewallet.ui.card.MyCardActivity;
+import com.txmpay.ewallet.ui.payment.ReChargeActivity;
 import com.txmpay.ewallet.ui.webview.BaseWebviewActivity;
 import com.youth.banner.Banner;
 import com.youth.banner.BannerConfig;
@@ -160,7 +161,7 @@ public class MainActivity extends BaseActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_card) {
-            // Handle the camera action
+            jumpToActivity(MyCardActivity.class);
         } else if (id == R.id.nav_safe_setting) {
             jumpToActivity(SafeSettingActivity.class);
         } else if (id == R.id.nav_clear) {
@@ -184,11 +185,13 @@ public class MainActivity extends BaseActivity
                 mDrawerLayout.openDrawer(GravityCompat.START);
                 break;
             case R.id.noticeImg:
+                jumpToActivity(NoticesActivity.class);
                 break;
             case R.id.home_img_qr:
-                jumpToActivity(LoginActivity.class);
+                jumpToActivity(QrCodeActivity.class);
                 break;
             case R.id.home_menu_wallet:
+                jumpToActivity(ReChargeActivity.class);
                 break;
             case R.id.home_menu_route_plan:
                 jumpToActivity(RoutePlanActivity.class);

@@ -73,9 +73,11 @@
         <activity android:name=".ui.account.safe.SafeSettingActivity" />
         <activity android:name=".ui.account.safe.ResetPhoneNumActivity" />
         <activity android:name=".ui.account.safe.BindNewPhoneActivity" />
-        <activity
-            android:name=".ui.webview.BaseWebviewActivity">
-        </activity>
+        <activity android:name=".ui.webview.BaseWebviewActivity" />
+        <activity android:name=".ui.main.QrCodeActivity" />
+        <activity android:name=".ui.card.MyCardActivity" />
+        <activity android:name=".ui.main.NoticesActivity" />
+        <activity android:name=".ui.payment.ReChargeActivity"></activity>
     </application>
 
 </manifest>

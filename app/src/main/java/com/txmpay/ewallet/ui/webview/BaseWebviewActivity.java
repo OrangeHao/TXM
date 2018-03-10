@@ -46,7 +46,6 @@ public class BaseWebviewActivity extends BaseActivity {
 
     @Override
     protected void initView() {
-        showReturnBtn();
         setToolBarScrollEnable(setToolBarScroll());
 
         mAgentWeb = AgentWeb.with(this)

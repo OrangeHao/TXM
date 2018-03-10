@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="160dp"
+    android:background="@drawable/card_bg"
+    android:padding="@dimen/activity_vertical_margin"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+
+
+    <ImageView
+        android:id="@+id/companylogo"
+        android:layout_width="@dimen/activity_avatar_size2"
+        android:layout_height="@dimen/activity_avatar_size2"
+        android:layout_marginRight="@dimen/space08"
+        android:clickable="true"
+        android:src="@mipmap/ic_launcher_round" />
+
+
+    <TextView
+        android:id="@+id/companyTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/companylogo"
+        android:layout_marginTop="@dimen/space04"
+        android:layout_toRightOf="@+id/companylogo"
+        tools:text="长沙公交集团"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font16" />
+
+    <TextView
+        android:id="@+id/cardTypeTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/companyTxt"
+        android:layout_toEndOf="@+id/companylogo"
+        tools:text="实名卡"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font16" />
+
+    <TextView
+        android:id="@+id/expiryData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_small"
+        tools:text="有效期：2028-11-11" />
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/activity_avatar_size2"
+        android:layout_alignParentBottom="true"
+        >
+
+        <ImageView
+            android:id="@+id/avatar"
+            android:layout_width="@dimen/activity_avatar_size2"
+            android:layout_height="@dimen/activity_avatar_size2"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="@dimen/space08"
+            android:clickable="true"
+            android:src="@mipmap/ic_launcher_round" />
+
+
+        <TextView
+            android:id="@+id/nameTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/avatar"
+            tools:text="****"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font16" />
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

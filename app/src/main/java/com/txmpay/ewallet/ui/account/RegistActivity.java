@@ -31,7 +31,6 @@ public class RegistActivity extends BaseActivity {
 
     @Override
     protected void initView() {
-        showReturnBtn();
         setBarTitle(R.string.account_regist);
         setBarTitleColor(getResources().getColor(R.color.white));
     }
