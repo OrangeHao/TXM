@@ -67,4 +67,5 @@
     <string name="card_expiry_date">有效期：%1$s</string>
 
     <string name="payment_pay_way">选择支付方式</string>
+    <string name="title_activity_data_base_test">DataBaseTestActivity</string>
 </resources>

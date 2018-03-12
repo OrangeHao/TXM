@@ -1,0 +1,58 @@
+{
+  "_note1": "KEEP THIS FILE! Check it into a version control system (VCS) like git.",
+  "_note2": "ObjectBox manages crucial IDs for your object model. See docs for details.",
+  "_note3": "If you have VCS merge conflicts, you must resolve them according to ObjectBox docs.",
+  "entities": [
+    {
+      "id": "1:3891478192422236413",
+      "lastPropertyId": "8:576863141988110128",
+      "name": "UserSetting",
+      "properties": [
+        {
+          "id": "1:679885317708358843",
+          "name": "uid"
+        },
+        {
+          "id": "2:3757444723130710338",
+          "name": "gesture"
+        },
+        {
+          "id": "3:2090967995056998135",
+          "name": "finger"
+        },
+        {
+          "id": "4:715771291879708518",
+          "name": "isGesture"
+        },
+        {
+          "id": "5:1750113384649578871",
+          "name": "isFingerPrint"
+        },
+        {
+          "id": "6:3502540937699623607",
+          "name": "gestureCheckCount"
+        },
+        {
+          "id": "7:7528072287984608844",
+          "name": "newstr"
+        },
+        {
+          "id": "8:576863141988110128",
+          "name": "newint"
+        }
+      ],
+      "relations": []
+    }
+  ],
+  "lastEntityId": "1:3891478192422236413",
+  "lastIndexId": "0:0",
+  "lastRelationId": "0:0",
+  "lastSequenceId": "0:0",
+  "modelVersion": 4,
+  "modelVersionParserMinimum": 4,
+  "retiredEntityUids": [],
+  "retiredIndexUids": [],
+  "retiredPropertyUids": [],
+  "retiredRelationUids": [],
+  "version": 1
+}

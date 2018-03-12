@@ -3,10 +3,13 @@ package com.txmpay.ewallet.app;
 import android.app.Application;
 
 import com.txmpay.ewallet.base.BaseApp;
+import com.txmpay.ewallet.model.MyObjectBox;
 import com.umeng.analytics.MobclickAgent;
 import com.umeng.commonsdk.UMConfigure;
 import com.umeng.socialize.PlatformConfig;
 import com.umeng.socialize.UMShareAPI;
+
+import io.objectbox.BoxStore;
 
 /**
  * created by czh on 2018-02-26
@@ -14,10 +17,22 @@ import com.umeng.socialize.UMShareAPI;
 
 public class MyApp extends BaseApp{
 
+
+    private static BoxStore sBoxStore;
+
     @Override
     public void onCreate() {
         super.onCreate();
+        initDataBase();
         initUmeng();
+    }
+
+    private void initDataBase(){
+        sBoxStore= MyObjectBox.builder().androidContext(this).build();
+    }
+
+    public static BoxStore getBoxStore(){
+        return sBoxStore;
     }
 
 
