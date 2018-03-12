@@ -34,6 +34,7 @@ public class SafeSettingActivity extends BaseActivity {
             case R.id.changePwLayout:
                 break;
             case R.id.paySafeLayout:
+                jumpToActivity(PaySafeActivity.class);
                 break;
         }
     }

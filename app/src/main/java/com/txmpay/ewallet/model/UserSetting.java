@@ -22,24 +22,6 @@ public class UserSetting implements Parcelable{
     int isFingerPrint;
     int gestureCheckCount;
 
-    String newstr;
-    int newint;
-
-    public String getNewstr() {
-        return newstr;
-    }
-
-    public void setNewstr(String newstr) {
-        this.newstr = newstr;
-    }
-
-    public int getNewint() {
-        return newint;
-    }
-
-    public void setNewint(int newint) {
-        this.newint = newint;
-    }
 
     public long getUid() {
         return uid;

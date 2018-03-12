@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/appbar_layout"></include>
+
+    <RelativeLayout
+        android:id="@+id/gestureSwitchLayout"
+        style="@style/ArrowItemLayoutStyle"
+        android:layout_marginTop="@dimen/space20">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/account_safe_gesture_verification"
+            android:textSize="@dimen/font16" />
+
+        <com.kyleduo.switchbutton.SwitchButton
+            android:id="@+id/gestureVSwitch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/changeGePwdLayout"
+        style="@style/ArrowItemLayoutStyle"
+        android:visibility="gone"
+        >
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/account_safe_change_gesture_setting"
+            android:textSize="@dimen/font16" />
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/base_right_arrow"
+            />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/activity_vertical_margin"
+        android:text="@string/account_safe_gestrure_tips"
+        android:textColor="@color/textDefualt3" />
+
+</LinearLayout>

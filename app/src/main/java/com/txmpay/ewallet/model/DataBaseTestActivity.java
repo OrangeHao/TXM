@@ -79,7 +79,6 @@ public class DataBaseTestActivity extends AppCompatActivity {
                 Log.d(TAG, "query");
                 UserSetting qU=userBox.get(1234);
                 Log.d(TAG, qU.getFinger());
-                Log.d(TAG, "newstr"+qU.getNewstr());
                 break;
             case R.id.button4:
                 Log.d(TAG, "upgrade");
@@ -89,14 +88,12 @@ public class DataBaseTestActivity extends AppCompatActivity {
             case R.id.button5:
                 Log.d(TAG, "add new");
                 userSetting.setUid(1235);
-                userSetting.setNewstr("1235");
-                userSetting.setNewint(222);
                 userBox.put(userSetting);
                 break;
             case R.id.button6:
                 Log.d(TAG, "query new");
                 UserSetting newuser=userBox.get(1235);
-                Log.d(TAG, newuser.getNewstr());
+                Log.d(TAG, newuser.getUid()+"");
                 break;
             case R.id.fab:
                 break;

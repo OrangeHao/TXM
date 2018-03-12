@@ -5,7 +5,7 @@
   "entities": [
     {
       "id": "1:3891478192422236413",
-      "lastPropertyId": "6:3502540937699623607",
+      "lastPropertyId": "8:576863141988110128",
       "name": "UserSetting",
       "properties": [
         {
@@ -31,6 +31,14 @@
         {
           "id": "6:3502540937699623607",
           "name": "gestureCheckCount"
+        },
+        {
+          "id": "7:7528072287984608844",
+          "name": "newstr"
+        },
+        {
+          "id": "8:576863141988110128",
+          "name": "newint"
         }
       ],
       "relations": []

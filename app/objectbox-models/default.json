@@ -31,14 +31,6 @@
         {
           "id": "6:3502540937699623607",
           "name": "gestureCheckCount"
-        },
-        {
-          "id": "7:7528072287984608844",
-          "name": "newstr"
-        },
-        {
-          "id": "8:576863141988110128",
-          "name": "newint"
         }
       ],
       "relations": []
@@ -52,7 +44,10 @@
   "modelVersionParserMinimum": 4,
   "retiredEntityUids": [],
   "retiredIndexUids": [],
-  "retiredPropertyUids": [],
+  "retiredPropertyUids": [
+    7528072287984608844,
+    576863141988110128
+  ],
   "retiredRelationUids": [],
   "version": 1
 }

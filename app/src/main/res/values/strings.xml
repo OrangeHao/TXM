@@ -57,6 +57,21 @@
     <string name="account_safe_verification_code">验证码</string>
     <string name="account_safe_bing_new_phone_tips">更换成功后，请使用新手机号登录</string>
     <string name="account_safe_change_phone_num">更换手机号</string>
+    <string name="account_safe_gesture_verification">手势验证</string>
+    <string name="account_safe_show_gesture_path">显示手势轨迹</string>
+    <string name="account_safe_change_gesture_setting">修改手势密码</string>
+    <string name="account_safe_gestrure_tips">开启验证后，在弹出支付二维码页面之前，需要先进行安全验证。</string>
+
+    <string name="gesture_forget_gesture">忘记手势密码</string>
+    <string name="gesture_default">请输入手势密码</string>
+    <string name="gesture_error">手势密码输入错误</string>
+    <string name="gesture_correct">输入正确</string>
+    <string name="gesture_create_gesture_default">绘制解锁图案</string>
+    <string name="gesture_create_gesture_correct">再次绘制解锁图案</string>
+    <string name="gesture_create_gesture_less_error">至少连接4个点，请重新输入</string>
+    <string name="gesture_create_gesture_confirm_error">与上一次绘制不一致，请重新绘制</string>
+    <string name="gesture_create_gesture_confirm_correct">设置成功</string>
+    <string name="gesture_create_gesture_reset">重新设置</string>
 
     <string name="card_my_special_card">我的特殊卡</string>
     <string name="card_apply">申请特殊卡</string>
