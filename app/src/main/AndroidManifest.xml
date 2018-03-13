@@ -82,7 +82,10 @@
             android:name=".model.DataBaseTestActivity"
             android:label="@string/title_activity_data_base_test"
             android:theme="@style/AppTheme" />
-        <activity android:name=".ui.account.safe.PaySafeActivity"></activity>
+        <activity android:name=".ui.account.safe.PaySafeActivity" />
+        <activity android:name=".ui.account.safe.CreateGestureActivity" />
+        <activity android:name=".ui.payment.MyWalletActivity" />
+        <activity android:name=".ui.payment.CouponActivity"></activity>
     </application>
 
 </manifest>

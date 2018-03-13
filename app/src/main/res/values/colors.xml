@@ -7,6 +7,8 @@
 
     <color name="colorPrimary2">#efefef</color>
 
+    <color name="colorBtnSelect">#3b64f3</color>
+
     <color name="colorPrimaryLight">#3b64f3</color>
 
     <color name="transparent">#00000000</color>
@@ -42,5 +44,7 @@
     <color name="home_menu_red">#fceadd</color>
     <color name="home_menu_red_text">#e27532</color>
     <color name="home_menu_red_press">#fcead1</color>
+
+    <color name="base_red">#f3323b</color>
 
 </resources>

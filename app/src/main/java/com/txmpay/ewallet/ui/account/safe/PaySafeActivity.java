@@ -9,6 +9,8 @@ import android.widget.RelativeLayout;
 import com.kyleduo.switchbutton.SwitchButton;
 import com.txmpay.ewallet.R;
 import com.txmpay.ewallet.base.BaseActivity;
+import com.txmpay.ewallet.info.AuthenticationType;
+import com.txmpay.ewallet.ui.SecureAccessManage;
 
 import butterknife.BindView;
 import butterknife.OnClick;
@@ -39,6 +41,9 @@ public class PaySafeActivity extends BaseActivity {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 Log.d("czg","ischeck:"+isChecked);
+                if (isChecked){
+                    jumpToActivity(CreateGestureActivity.class);
+                }
             }
         });
     }
@@ -47,8 +52,10 @@ public class PaySafeActivity extends BaseActivity {
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.gestureVSwitch:
+
                 break;
             case R.id.changeGePwdLayout:
+                SecureAccessManage.startGestureCheck(PaySafeActivity.this, AuthenticationType.CHANGE_GESTURE);
                 break;
             case R.id.gestureSwitchLayout:
                 if (mSwitchBtn.isChecked()){

@@ -35,7 +35,7 @@
             android:textColor="@color/textDefualt3"
             android:textSize="@dimen/font16" />
 
-        <com.txmpay.csewallet.widget.LockPatternView
+        <com.txmpay.ewallet.widget.lockpattern.LockPatternView
             android:id="@+id/lockPatternView"
             android:layout_width="270dp"
             android:layout_height="270dp" />

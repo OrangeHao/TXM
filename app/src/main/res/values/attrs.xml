@@ -16,4 +16,9 @@
             <enum name="rectangle" value="1"/>
         </attr>
     </declare-styleable>
+
+    <declare-styleable name="ArcView">
+        <attr name="arcHeight" format="dimension"/>
+        <attr name="bgColor" format="color"/>
+    </declare-styleable>
 </resources>

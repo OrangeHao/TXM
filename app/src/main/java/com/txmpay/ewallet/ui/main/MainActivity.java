@@ -20,6 +20,7 @@ import com.txmpay.ewallet.base.BaseActivity;
 import com.txmpay.ewallet.model.DataBaseTestActivity;
 import com.txmpay.ewallet.ui.account.safe.SafeSettingActivity;
 import com.txmpay.ewallet.ui.card.MyCardActivity;
+import com.txmpay.ewallet.ui.payment.MyWalletActivity;
 import com.txmpay.ewallet.ui.payment.ReChargeActivity;
 import com.txmpay.ewallet.ui.webview.BaseWebviewActivity;
 import com.youth.banner.Banner;
@@ -192,7 +193,7 @@ public class MainActivity extends BaseActivity
                 jumpToActivity(QrCodeActivity.class);
                 break;
             case R.id.home_menu_wallet:
-                jumpToActivity(DataBaseTestActivity.class);
+                jumpToActivity(MyWalletActivity.class);
                 break;
             case R.id.home_menu_route_plan:
                 jumpToActivity(RoutePlanActivity.class);

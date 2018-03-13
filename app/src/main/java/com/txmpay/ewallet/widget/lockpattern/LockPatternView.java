@@ -1,4 +1,4 @@
-package com.txmpay.ewallet.widget;
+package com.txmpay.ewallet.widget.lockpattern;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -13,9 +13,6 @@ import android.view.HapticFeedbackConstants;
 import android.view.MotionEvent;
 import android.view.View;
 
-
-import com.txmpay.ewallet.R;
-import com.txmpay.ewallet.utils.LockPatternUtil;
 
 import java.util.ArrayList;
 import java.util.List;

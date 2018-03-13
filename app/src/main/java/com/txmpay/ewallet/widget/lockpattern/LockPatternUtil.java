@@ -1,9 +1,9 @@
-package com.txmpay.ewallet.utils;
+package com.txmpay.ewallet.widget.lockpattern;
 
 import android.content.Context;
 
 
-import com.txmpay.ewallet.widget.LockPatternView;
+import com.txmpay.ewallet.utils.MD5Util;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;

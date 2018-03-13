@@ -31,6 +31,7 @@ public class MyApp extends BaseApp{
         sBoxStore= MyObjectBox.builder().androidContext(this).build();
     }
 
+    //数据库操作对象
     public static BoxStore getBoxStore(){
         return sBoxStore;
     }

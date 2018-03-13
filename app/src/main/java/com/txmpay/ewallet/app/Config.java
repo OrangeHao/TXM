@@ -13,6 +13,7 @@ import com.lms.support.common.YiPrefsKeeper;
 public class Config implements YiPrefsKeeper.YiPrefsKeepable {
     private static Config mConfig = null;
 
+    private final long DEFAULT_UID=1000l;
     /**
      * 是否第一次启动app
      */
@@ -25,7 +26,7 @@ public class Config implements YiPrefsKeeper.YiPrefsKeepable {
     /**
      * 保存常用的用户信息,用户详细资料可通过UserDao获取UserModel
      */
-    private int uid;
+    private long uid;
     private int cartoonid;
     private String loginPhone;
     private String password;
@@ -52,7 +53,7 @@ public class Config implements YiPrefsKeeper.YiPrefsKeepable {
     @Override
     public void save(Editor editor) {
         editor.putBoolean("isFirstLaunchApp", isFirstLaunchApp);
-        editor.putInt("uid", uid);
+        editor.putLong("uid", uid);
         editor.putBoolean("isLogin", isLogin);
         editor.putString("loginPhone", loginPhone);
         editor.putInt("cartoonid", cartoonid);
@@ -68,7 +69,7 @@ public class Config implements YiPrefsKeeper.YiPrefsKeepable {
     @Override
     public void restore(SharedPreferences preferences) {
         isFirstLaunchApp = preferences.getBoolean("isFirstLaunchApp", true);
-        uid = preferences.getInt("uid", 0);
+        uid = preferences.getLong("uid", DEFAULT_UID);
         isLogin = preferences.getBoolean("isLogin", false);
         loginPhone = preferences.getString("loginPhone", null);
         cartoonid = preferences.getInt("cartoonid", 6420);
@@ -86,7 +87,7 @@ public class Config implements YiPrefsKeeper.YiPrefsKeepable {
      */
     @Override
     public void clearAll() {
-        uid = 0;
+        uid = DEFAULT_UID;
         isLogin = false;
         loginPhone = null;
         password = null;
@@ -116,11 +117,11 @@ public class Config implements YiPrefsKeeper.YiPrefsKeepable {
         isLogin = login;
     }
 
-    public int getUid() {
+    public long getUid() {
         return uid;
     }
 
-    public void setUid(int uid) {
+    public void setUid(long uid) {
         this.uid = uid;
     }
 

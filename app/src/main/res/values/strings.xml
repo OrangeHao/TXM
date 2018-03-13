@@ -66,6 +66,7 @@
     <string name="gesture_default">请输入手势密码</string>
     <string name="gesture_error">手势密码输入错误</string>
     <string name="gesture_correct">输入正确</string>
+    <string name="gesture_create_activity">设置手势密码</string>
     <string name="gesture_create_gesture_default">绘制解锁图案</string>
     <string name="gesture_create_gesture_correct">再次绘制解锁图案</string>
     <string name="gesture_create_gesture_less_error">至少连接4个点，请重新输入</string>
@@ -80,6 +81,19 @@
     <string name="card_apply_cancel">取消申请</string>
     <string name="card_real_name">实名卡</string>
     <string name="card_expiry_date">有效期：%1$s</string>
+
+    <string name="payment_wallet_balance">乘车码余额(元)</string>
+    <string name="payment_wallet_pre_pay_money">分段收费预付金额</string>
+    <string name="payment_wallet_order_detail">明细</string>
+    <string name="payment_wallet_check">查看</string>
+    <string name="payment_wallet_coupon">优惠券</string>
+    <string name="payment_wallet_pre_pay_tips">乘坐分段收费线路，上车扫码成功会预支付当前站至终点站区间的乘车费，在您扫码下车后退还差额，差额为预付费减实际乘车费。</string>
+    <string name="payment_wallet_numpass_count">计次票</string>
+    <string name="payment_wallet_my_numpass_count">我的计次票</string>
+    <string name="payment_wallet_my_numpass_month">我的计次月票</string>
+    <string name="payment_wallet_my_numpass_season">我的计次季票</string>
+    <string name="payment_wallet_my_numpass_year">我的计次年票</string>
+    <string name="payment_wallet_purchase">购买</string>
 
     <string name="payment_pay_way">选择支付方式</string>
     <string name="title_activity_data_base_test">DataBaseTestActivity</string>

@@ -29,7 +29,6 @@
     <RelativeLayout
         android:id="@+id/changeGePwdLayout"
         style="@style/ArrowItemLayoutStyle"
-        android:visibility="gone"
         >
 
 

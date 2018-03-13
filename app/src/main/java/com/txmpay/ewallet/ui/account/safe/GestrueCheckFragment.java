@@ -1,8 +1,6 @@
 package com.txmpay.ewallet.ui.account.safe;
 
 import android.content.Context;
-import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.view.MotionEvent;
@@ -16,13 +14,12 @@ import android.widget.TextView;
 
 import com.lms.support.util.ScreenUtils;
 import com.txmpay.ewallet.R;
-import com.txmpay.ewallet.base.BaseActivity;
 import com.txmpay.ewallet.base.BaseFragment;
-import com.txmpay.ewallet.info.AuthenticationType;
-import com.txmpay.ewallet.utils.LockPatternUtil;
-import com.txmpay.ewallet.widget.LockPatternView;
+import com.txmpay.ewallet.widget.lockpattern.LockPatternView;
 
 import java.util.List;
+
+import butterknife.BindView;
 
 /**
  * created by czh on 2018-03-12
@@ -30,8 +27,13 @@ import java.util.List;
 
 public class GestrueCheckFragment extends BaseFragment{
 
+    @BindView(R.id.messageTxt)
     TextView messageTxt;
+
+    @BindView(R.id.lockPatternView)
     LockPatternView lockPatternView;
+
+    @BindView(R.id.closeBtn)
     ImageView closeTxt;
 
     ViewGroup group;
@@ -48,6 +50,8 @@ public class GestrueCheckFragment extends BaseFragment{
 
     @Override
     protected void initView(View rootView) {
+        view=rootView;
+
         //隐藏键盘
         InputMethodManager imm = (InputMethodManager) getActivity()
                 .getSystemService(Context.INPUT_METHOD_SERVICE);
@@ -57,13 +61,21 @@ public class GestrueCheckFragment extends BaseFragment{
                 imm.hideSoftInputFromWindow(focusView.getWindowToken(), 0);
             }
         }
-
         //添加整个布局
         getActivity().getWindow().setSoftInputMode(
                 WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN
                         | WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN);
         group = (ViewGroup) getActivity().getWindow().getDecorView();
         group.addView(view);
+
+        RelativeLayout.LayoutParams closeLP = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.WRAP_CONTENT, RelativeLayout.LayoutParams.WRAP_CONTENT);
+        closeLP.setMargins(0, ScreenUtils.getStatusBarHeight(getContext()), 0, 0);
+        closeTxt.setLayoutParams(closeLP);
+
+    }
+
+    @Override
+    protected void initListner() {
         view.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View view, MotionEvent motionEvent) {
@@ -71,21 +83,12 @@ public class GestrueCheckFragment extends BaseFragment{
             }
         });
         //关闭按钮
-        closeTxt = (ImageView) view.findViewById(R.id.closeBtn);
         closeTxt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 dismiss();
             }
         });
-        RelativeLayout.LayoutParams closeLP = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.WRAP_CONTENT, RelativeLayout.LayoutParams.WRAP_CONTENT);
-        closeLP.setMargins(0, ScreenUtils.getStatusBarHeight(getContext()), 0, 0);
-        closeTxt.setLayoutParams(closeLP);
-
-        messageTxt = (TextView) view.findViewById(R.id.messageTxt);
-        lockPatternView = (LockPatternView) view.findViewById(R.id.lockPatternView);
-        //初始化数据
-//        gesturePassword = userSettingModel.getGesture();
         lockPatternView.setOnPatternListener(patternListener);
     }
 

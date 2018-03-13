@@ -58,7 +58,7 @@ public class DataBaseTestActivity extends AppCompatActivity {
 
     @OnClick({R.id.button, R.id.button2, R.id.button3, R.id.button4, R.id.button5, R.id.button6, R.id.fab})
     public void onViewClicked(View view) {
-        Box<UserSetting> userBox= MyApp.getBoxStore().boxFor(UserSetting.class);
+        Box<UserSetting> userBox= ObjectBoxHelper.getBox(UserSetting.class);
         UserSetting userSetting=new UserSetting();
         userSetting.setUid(1234);
         userSetting.setFinger("111");
