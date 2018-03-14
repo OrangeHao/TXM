@@ -86,6 +86,7 @@
     <string name="payment_wallet_pre_pay_money">分段收费预付金额</string>
     <string name="payment_wallet_order_detail">明细</string>
     <string name="payment_wallet_check">查看</string>
+    <string name="payment_wallet_recharge_confirm">充值%1$s</string>
     <string name="payment_wallet_coupon">优惠券</string>
     <string name="payment_wallet_pre_pay_tips">乘坐分段收费线路，上车扫码成功会预支付当前站至终点站区间的乘车费，在您扫码下车后退还差额，差额为预付费减实际乘车费。</string>
     <string name="payment_wallet_numpass_count">计次票</string>
@@ -94,6 +95,23 @@
     <string name="payment_wallet_my_numpass_season">我的计次季票</string>
     <string name="payment_wallet_my_numpass_year">我的计次年票</string>
     <string name="payment_wallet_purchase">购买</string>
+    <string name="payment_unit_yuan">元</string>
+
+
+    <string name="about_version_update">版本更新</string>
+    <string name="about_title">关于</string>
+    <string name="about_version_real">已经是最新版本</string>
+    <string name="about_advise_reply">意见反馈</string>
+    <string name="about_service_phone">客服电话</string>
+    <string name="about_introduction">简介</string>
+    <string name="about_office_site">官网</string>
+    <string name="about_service_rule">服务条款</string>
+    <string name="about_copyright">长沙银行股份有限公司\n珠海两码事信息技术有限公司\n长沙交通投资控股集团有限公司\nCopyright © 2016-2017 txmpay.com. All Rights Reserved.</string>
+    <string name="about_copyright2">版权所有</string>
+    <string name="about_advice_tip">请您输入遇到的问题或建议...</string>
+    <string name="about_contact_phone">联系电话</string>
+    <string name="about_leave_phone">请输入联系电话</string>
+
 
     <string name="payment_pay_way">选择支付方式</string>
     <string name="title_activity_data_base_test">DataBaseTestActivity</string>

@@ -38,10 +38,11 @@ public class MyWalletActivity extends BaseActivity {
         balanceTxt.setText("28.50");
     }
 
-    @OnClick({R.id.qr_recharge_layout, R.id.lookFrozenTxt, R.id.lookCouponTxt})
+    @OnClick({R.id.recharge_layout, R.id.lookFrozenTxt, R.id.lookCouponTxt})
     public void onViewClicked(View view) {
         switch (view.getId()) {
-            case R.id.qr_recharge_layout:
+            case R.id.recharge_layout:
+                jumpToActivity(ReChargeActivity.class);
                 break;
             case R.id.lookFrozenTxt:
                 break;

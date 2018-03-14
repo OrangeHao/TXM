@@ -50,7 +50,7 @@
 
 
         <LinearLayout
-            android:id="@+id/qr_recharge_layout"
+            android:id="@+id/recharge_layout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"

@@ -20,6 +20,7 @@ import com.txmpay.ewallet.base.BaseActivity;
 import com.txmpay.ewallet.model.DataBaseTestActivity;
 import com.txmpay.ewallet.ui.account.safe.SafeSettingActivity;
 import com.txmpay.ewallet.ui.card.MyCardActivity;
+import com.txmpay.ewallet.ui.menu.AboutActivity;
 import com.txmpay.ewallet.ui.payment.MyWalletActivity;
 import com.txmpay.ewallet.ui.payment.ReChargeActivity;
 import com.txmpay.ewallet.ui.webview.BaseWebviewActivity;
@@ -171,7 +172,7 @@ public class MainActivity extends BaseActivity
         } else if (id == R.id.nav_share) {
 
         } else if (id == R.id.nav_about) {
-
+            jumpToActivity(AboutActivity.class);
         } else if (id == R.id.nav_logout) {
 
         }

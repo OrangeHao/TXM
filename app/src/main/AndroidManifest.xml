@@ -85,7 +85,8 @@
         <activity android:name=".ui.account.safe.PaySafeActivity" />
         <activity android:name=".ui.account.safe.CreateGestureActivity" />
         <activity android:name=".ui.payment.MyWalletActivity" />
-        <activity android:name=".ui.payment.CouponActivity"></activity>
+        <activity android:name=".ui.payment.CouponActivity" />
+        <activity android:name=".ui.menu.AboutActivity"></activity>
     </application>
 
 </manifest>
