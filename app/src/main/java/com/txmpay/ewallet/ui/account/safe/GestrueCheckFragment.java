@@ -40,6 +40,7 @@ public class GestrueCheckFragment extends BaseFragment{
     View view;
     boolean dismissed = true;
 
+
     private static final long DELAYTIME = 600l;
     private String gesturePassword;
 
@@ -67,6 +68,7 @@ public class GestrueCheckFragment extends BaseFragment{
                         | WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN);
         group = (ViewGroup) getActivity().getWindow().getDecorView();
         group.addView(view);
+
 
         RelativeLayout.LayoutParams closeLP = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.WRAP_CONTENT, RelativeLayout.LayoutParams.WRAP_CONTENT);
         closeLP.setMargins(0, ScreenUtils.getStatusBarHeight(getContext()), 0, 0);

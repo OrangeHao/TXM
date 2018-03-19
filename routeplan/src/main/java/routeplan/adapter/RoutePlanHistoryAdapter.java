@@ -111,8 +111,8 @@ public class RoutePlanHistoryAdapter extends RecyclerView.Adapter<RecyclerView.V
                             .setMessage(mContext.getString(R.string.route_plan_is_delete))
                             .setPositiveButton("Yes", (dialog, button) ->{
                                 HistoryPoi hp=new HistoryPoi(mContext);
-                                hp.remove(record.id);
                                 models.remove(record);
+                                hp.updateHistoryPoi(models);
                                 notifyDataSetChanged();
                             })
                             .setNegativeButton("Cancel", (dialog, button) ->{

@@ -110,7 +110,8 @@ public abstract class BaseActivity<V,T extends BasePresenter> extends AppCompatA
                 mToolBar.setNavigationOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        finish();
+//                        finish();
+                        onBackPressed();
                     }
                 });
             }
@@ -204,5 +205,10 @@ public abstract class BaseActivity<V,T extends BasePresenter> extends AppCompatA
     public void jumpToActivity(Class activity) {
         Intent intent = new Intent(this, activity);
         startActivity(intent);
+    }
+
+    public void jumpToActivity(Class activity,Bundle bundle) {
+        Intent intent = new Intent(this, activity);
+        startActivity(intent,bundle);
     }
 }

@@ -1,10 +1,14 @@
 package com.txmpay.ewallet.ui.main;
 
+import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
+import android.support.v4.app.ActivityOptionsCompat;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -13,21 +17,30 @@ import android.view.ViewTreeObserver;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
 import com.jaeger.library.StatusBarUtil;
+import com.lms.support.widget.YiDialog;
+import com.lms.support.widget.YiToast;
 import com.txmpay.ewallet.R;
 import com.txmpay.ewallet.base.BaseActivity;
+import com.txmpay.ewallet.common.ImgLoader;
 import com.txmpay.ewallet.model.DataBaseTestActivity;
 import com.txmpay.ewallet.ui.account.safe.SafeSettingActivity;
 import com.txmpay.ewallet.ui.card.MyCardActivity;
 import com.txmpay.ewallet.ui.menu.AboutActivity;
+import com.txmpay.ewallet.ui.menu.PersonalInfoActivity;
+import com.txmpay.ewallet.ui.menu.PhotoViewActivity;
 import com.txmpay.ewallet.ui.payment.MyWalletActivity;
 import com.txmpay.ewallet.ui.payment.ReChargeActivity;
 import com.txmpay.ewallet.ui.webview.BaseWebviewActivity;
+import com.txmpay.ewallet.utils.FileUtils;
 import com.youth.banner.Banner;
 import com.youth.banner.BannerConfig;
 import com.youth.banner.Transformer;
 
+import java.io.File;
 import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.List;
@@ -58,6 +71,9 @@ public class MainActivity extends BaseActivity
     @BindView(R.id.home_bottom_layout)
     LinearLayout mBottomLayout;
 
+    private ImageView mAvatar;
+    private TextView mName;
+    private View mTopView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -89,7 +105,13 @@ public class MainActivity extends BaseActivity
         mNavigationView.setItemIconTintList(null);
         resetItemLayout(mNavigationView);
 
+        //drawableview toplayout
+        mTopView=mNavigationView.getHeaderView(0);
+        mAvatar=(ImageView)mTopView.findViewById(R.id.imageView);
+        mName=(TextView) mTopView.findViewById(R.id.nameTxt);
 
+
+        mNavigationView.setItemBackground(getResources().getDrawable(R.drawable.selector_color_bg_white_gray));
 
         //添加占位布局，方便滑动
         mBottomLayout.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
@@ -108,6 +130,30 @@ public class MainActivity extends BaseActivity
         initAdv();
     }
 
+    @Override
+    protected void initListner() {
+        mTopView.setOnClickListener((View v)->{
+            jumpToActivity(PersonalInfoActivity.class);
+        });
+        mAvatar.setOnClickListener((View v)->{
+            if (Build.VERSION.SDK_INT < 21) {
+                jumpToActivity(PhotoViewActivity.class);
+            } else {
+                ActivityOptionsCompat options = ActivityOptionsCompat.
+                        makeSceneTransitionAnimation(MainActivity.this, v,getString(R.string.home_transition_name));
+                jumpToActivity(PhotoViewActivity.class,options.toBundle());
+            }
+        });
+        mDrawerLayout.addDrawerListener(new DrawerLayout.SimpleDrawerListener() {
+            @Override
+            public void onDrawerOpened(View drawerView) {
+                super.onDrawerOpened(drawerView);
+                String size= FileUtils.getFolderSizeWithUnit(Glide.getPhotoCacheDir(mContext));
+                Log.d("czg","cache size:"+size);
+            }
+        });
+
+    }
 
     private void initAdv() {
         mBanner.setImageLoader(new GlideImageLoader());
@@ -168,7 +214,7 @@ public class MainActivity extends BaseActivity
         } else if (id == R.id.nav_safe_setting) {
             jumpToActivity(SafeSettingActivity.class);
         } else if (id == R.id.nav_clear) {
-
+            clearCache();
         } else if (id == R.id.nav_share) {
 
         } else if (id == R.id.nav_about) {
@@ -205,6 +251,26 @@ public class MainActivity extends BaseActivity
         }
     }
 
+
+    private void clearCache(){
+        YiDialog.showDialog(mContext, getString(R.string.home_is_clear), new YiDialog.OnMsgDialogListener() {
+            @Override
+            public void onPositive() {
+                //清理Webview缓存数据库
+                try {
+                    ImgLoader.clearCache();
+                    YiToast.shortToast(mContext, R.string.home_clear_success);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+
+            @Override
+            public void onNegative() {
+
+            }
+        });
+    }
 
     private void resetItemLayout(NavigationView navigationView) {
         //通过反射拿到menu的item布局。修改布局参数

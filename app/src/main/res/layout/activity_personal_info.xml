@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+
+    <include layout="@layout/appbar_layout"></include>
+
+    <RelativeLayout
+        android:id="@+id/avatarLayout"
+        style="@style/ArrowItemLayoutStyle"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_centerVertical="true"
+            android:text="@string/personal_info_avatar"
+            android:textSize="@dimen/font16"/>
+
+        <ImageView
+            android:id="@+id/avatarImg"
+            android:layout_width="@dimen/activity_avatar_size2"
+            android:layout_height="@dimen/activity_avatar_size2"
+            android:layout_alignParentRight="true"
+            android:layout_toLeftOf="@id/arrow_1"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/activity_vertical_margin"
+            android:src="@drawable/account_icon_avatar" />
+
+
+        <ImageView
+            android:id="@+id/arrow_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/base_right_arrow"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/nameLayout"
+        style="@style/ArrowItemLayoutStyle"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_centerVertical="true"
+            android:text="@string/personal_info_nick_name"
+            android:textSize="@dimen/font16"/>
+
+        <TextView
+            android:id="@+id/nameTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_toLeftOf="@id/arrow_2"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/activity_vertical_margin"
+            android:textColor="@color/textDefualt3"
+            tools:text="heiheihie"
+            android:textSize="@dimen/font16" />
+
+
+        <ImageView
+            android:id="@+id/arrow_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/base_right_arrow"
+            />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/genderLayout"
+        style="@style/ArrowItemLayoutStyle"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_centerVertical="true"
+            android:text="@string/personal_info_"
+            android:textSize="@dimen/font16"/>
+
+        <TextView
+            android:id="@+id/genderTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/arrow_3"
+            android:layout_marginRight="@dimen/activity_vertical_margin"
+            android:textColor="@color/textDefualt3"
+            tools:text="women"
+            android:textSize="@dimen/font16" />
+
+
+        <ImageView
+            android:id="@+id/arrow_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/base_right_arrow"
+            />
+    </RelativeLayout>
+
+</LinearLayout>

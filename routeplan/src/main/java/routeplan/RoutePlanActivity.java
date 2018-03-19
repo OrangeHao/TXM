@@ -535,14 +535,14 @@ public class RoutePlanActivity extends AppCompatActivity implements RouteSearch.
             mEndPoi=new Poi(item.getTitle(),latLng,item.getAdName());
         }else if (event.getFrom()==PoiSearchActivity.FROM_HOME){
             LatLng homeL=new LatLng(point.getLatitude(),point.getLongitude());
-            Poi home=new Poi(getString(R.string.route_plan_home),homeL,item.getTitle());
+            Poi home=new Poi(item.getTitle(),homeL,item.getTitle());
             mHistoryPois.updateHomePoi(home);
             mHomeText.setText(getString(R.string.route_plan_home));
             mHomeAdText.setText(item.getTitle());
             return;
         }else if (event.getFrom()==PoiSearchActivity.FROM_COMPANY){
             LatLng comL=new LatLng(point.getLatitude(),point.getLongitude());
-            Poi company=new Poi(getString(R.string.route_plan_company),comL,item.getTitle());
+            Poi company=new Poi(item.getTitle(),comL,item.getTitle());
             mHistoryPois.updateCompanyPoi(company);
             mCompanyText.setText(getString(R.string.route_plan_company));
             mCompanyAdText.setText(item.getTitle());
@@ -735,19 +735,13 @@ public class RoutePlanActivity extends AppCompatActivity implements RouteSearch.
         HistoryPoi.RouteRecord record=new HistoryPoi.RouteRecord(start,target,0);
 
         if (!mHistoryList.contains(record)){
-            record.id=mHistoryList.size();
-            mHistoryList.add(record);
             Log.d("czh","history size:"+mHistoryList.size());
-
-            if (mHistoryList.size()>HistoryPoi.LIMIT){
-                for (int i=0;i<(mHistoryList.size()-HistoryPoi.LIMIT);i++){
-                    HistoryPoi.RouteRecord temp=mHistoryList.get(0);
-                    mHistoryList.remove(temp);
-                }
-                mHistoryPois.updateHistoryPoi(mHistoryList);
-            }else {
-                mHistoryPois.addHistoryPoi(record);
+            if (mHistoryList.size()>=HistoryPoi.LIMIT){
+                mHistoryList.remove(0);
             }
+            mHistoryList.add(record);
+            mHistoryPois.updateHistoryPoi(mHistoryList);
+
             mHistoryAdapter.notifyDataSetChanged();
         }
     }

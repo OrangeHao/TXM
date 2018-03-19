@@ -33,6 +33,9 @@
     <string name="home_qr_tip5">2.若带人乘车，请刷新二维码。</string>
     <string name="home_recharge">充值</string>
     <string name="home_message">消息</string>
+    <string name="home_transition_name">photo</string>
+    <string name="home_is_clear">是否清理缓存？</string>
+    <string name="home_clear_success">清理成功</string>
 
     <string name="account_input_phone_num">请输入手机号</string>
     <string name="account_reset_phone_num">请输入注册的手机号</string>
@@ -111,6 +114,18 @@
     <string name="about_advice_tip">请您输入遇到的问题或建议...</string>
     <string name="about_contact_phone">联系电话</string>
     <string name="about_leave_phone">请输入联系电话</string>
+
+    <string name="personal_info_avatar">头像</string>
+    <string name="personal_info_photo">照片</string>
+    <string name="personal_info_name">姓名</string>
+    <string name="personal_info_nick_name">昵称</string>
+    <string name="personal_info_">性别</string>
+    <string name="personal_info_male">男</string>
+    <string name="personal_info_female">女</string>
+    <string name="personal_info_name_edit">编辑姓名</string>
+    <string name="personal_info_edit">编辑</string>
+    <string name="personal_info_gender_edit">编辑性别</string>
+    <string name="personal_info_person_info">个人信息</string>
 
 
     <string name="payment_pay_way">选择支付方式</string>

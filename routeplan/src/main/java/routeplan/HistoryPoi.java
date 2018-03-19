@@ -41,7 +41,7 @@ public class HistoryPoi {
     }
 
     public void updateCompanyPoi(Poi poi){
-        mShareP.edit().putString(HOME,PoiToString(poi)).commit();
+        mShareP.edit().putString(COMPANY,PoiToString(poi)).commit();
     }
 
     public List<RouteRecord> getHisttoryPois(){
@@ -150,7 +150,7 @@ public class HistoryPoi {
             if (obj instanceof RouteRecord){
                 RouteRecord model=(RouteRecord)obj;
                 if (this.startPoi.getName().equals(model.startPoi.getName())
-                        && this.targetPoi.getName().equals(targetPoi.getName())){
+                        && this.targetPoi.getName().equals(model.targetPoi.getName())){
                     return true;
                 }
             }
