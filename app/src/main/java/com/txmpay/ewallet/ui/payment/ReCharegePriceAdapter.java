@@ -10,6 +10,7 @@ import java.util.List;
 
 /**
  * created by czh on 2018-03-14
+ * 充值价格布局适配器
  */
 
 public class ReCharegePriceAdapter extends BaseQuickAdapter<PriceItem,BaseViewHolder>{

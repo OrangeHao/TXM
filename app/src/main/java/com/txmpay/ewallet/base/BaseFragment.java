@@ -11,6 +11,7 @@ import butterknife.ButterKnife;
 
 /**
  * created by czh on 2018-02-27
+ * Fragment类
  */
 
 public abstract class BaseFragment<T extends BasePresenter> extends Fragment{

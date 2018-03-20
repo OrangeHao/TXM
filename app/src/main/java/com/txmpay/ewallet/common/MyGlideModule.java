@@ -9,6 +9,7 @@ import com.bumptech.glide.module.AppGlideModule;
 
 /**
  * created by czh on 2018-03-14
+ * GlideModule详细内容请参考官方文档
  */
 
 @GlideModule

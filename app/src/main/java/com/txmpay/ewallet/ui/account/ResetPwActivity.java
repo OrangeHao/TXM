@@ -10,6 +10,10 @@ import com.txmpay.ewallet.widget.NormalEditText;
 import butterknife.BindView;
 import butterknife.OnClick;
 
+
+/**
+ * 重置密码
+ */
 public class ResetPwActivity extends BaseActivity {
 
     @BindView(R.id.phoneEdit)

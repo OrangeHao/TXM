@@ -14,6 +14,7 @@ import static com.bumptech.glide.load.resource.drawable.DrawableTransitionOption
 
 /**
  * created by czh on 2018-03-14
+ * 图片加载库封装
  */
 
 public class ImgLoader {

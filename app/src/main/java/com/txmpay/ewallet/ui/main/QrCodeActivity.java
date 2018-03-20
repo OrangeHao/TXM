@@ -11,6 +11,10 @@ import com.txmpay.ewallet.base.BaseActivity;
 import butterknife.BindView;
 import butterknife.OnClick;
 
+
+/**
+ * 二维码刷卡页
+ */
 public class QrCodeActivity extends BaseActivity {
 
     @BindView(R.id.avatarImg)

@@ -93,10 +93,6 @@
 
 -keep class com.umeng.commonsdk.** {*;}
 
--keep public class [您的应用包名].R$*{
-    public static final int *;
-}
-
 
 # 保持应用的资源文件不被混淆
 -keep public class com.txmpay.sanyawallet.R$*{

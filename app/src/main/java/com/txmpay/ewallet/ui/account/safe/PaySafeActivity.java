@@ -15,6 +15,9 @@ import com.txmpay.ewallet.ui.SecureAccessManage;
 import butterknife.BindView;
 import butterknife.OnClick;
 
+/**
+ * 支付安全页
+ */
 public class PaySafeActivity extends BaseActivity {
 
     @BindView(R.id.changeGePwdLayout)

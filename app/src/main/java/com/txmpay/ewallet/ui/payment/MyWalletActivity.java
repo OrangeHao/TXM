@@ -10,6 +10,9 @@ import com.txmpay.ewallet.base.BaseActivity;
 import butterknife.BindView;
 import butterknife.OnClick;
 
+/**
+ * 我的钱包页
+ */
 public class MyWalletActivity extends BaseActivity {
 
     @BindView(R.id.balanceTxt)

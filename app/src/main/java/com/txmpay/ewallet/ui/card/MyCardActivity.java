@@ -13,6 +13,10 @@ import com.txmpay.ewallet.base.BaseActivity;
 import butterknife.BindView;
 import butterknife.OnClick;
 
+
+/**
+ * 我的特殊卡
+ */
 public class MyCardActivity extends BaseActivity {
 
     @BindView(R.id.recyclerView)

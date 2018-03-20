@@ -11,6 +11,10 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
+
+/**
+ * 重设手机号码
+ */
 public class ResetPhoneNumActivity extends BaseActivity {
 
     @BindView(R.id.verificationCodeEdit)

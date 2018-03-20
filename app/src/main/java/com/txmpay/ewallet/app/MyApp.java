@@ -27,6 +27,8 @@ public class MyApp extends BaseApp{
         initUmeng();
     }
 
+
+    //报错请rebuild生成
     private void initDataBase(){
         sBoxStore= MyObjectBox.builder().androidContext(this).build();
     }

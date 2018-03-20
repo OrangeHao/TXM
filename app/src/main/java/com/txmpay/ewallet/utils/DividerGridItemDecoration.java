@@ -4,6 +4,10 @@ import android.graphics.Rect;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
+
+/**
+ * rv item间隔
+ */
 public class DividerGridItemDecoration extends RecyclerView.ItemDecoration {
     private int space;
     private int spanCount = 4;

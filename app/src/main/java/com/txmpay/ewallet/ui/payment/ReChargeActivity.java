@@ -17,6 +17,9 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.OnClick;
 
+/**
+ * 充值页
+ */
 public class ReChargeActivity extends BaseActivity {
 
     @BindView(R.id.account_rv)

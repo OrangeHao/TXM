@@ -17,6 +17,10 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 import io.objectbox.Box;
 
+
+/**
+ * 测试类，无用
+ */
 public class DataBaseTestActivity extends AppCompatActivity {
 
     private final String TAG="czh";

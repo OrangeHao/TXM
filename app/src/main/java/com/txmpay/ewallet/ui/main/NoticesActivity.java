@@ -5,6 +5,10 @@ import android.os.Bundle;
 import com.txmpay.ewallet.R;
 import com.txmpay.ewallet.base.BaseActivity;
 
+
+/**
+ * 消息页
+ */
 public class NoticesActivity extends BaseActivity {
 
     @Override

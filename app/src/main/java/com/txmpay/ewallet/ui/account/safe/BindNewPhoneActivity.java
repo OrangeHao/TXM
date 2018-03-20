@@ -10,6 +10,9 @@ import com.txmpay.ewallet.widget.NormalEditText;
 import butterknife.BindView;
 import butterknife.OnClick;
 
+/**
+ * 绑定新手机页
+ */
 public class BindNewPhoneActivity extends BaseActivity {
 
     @BindView(R.id.phoneNumEdt)

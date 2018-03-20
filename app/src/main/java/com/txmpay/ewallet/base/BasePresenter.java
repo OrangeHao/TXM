@@ -19,6 +19,10 @@ package com.txmpay.ewallet.base;
 import java.lang.ref.Reference;
 import java.lang.ref.WeakReference;
 
+/**
+ * Presenter基类  可用可不用
+ * @param <V>
+ */
 public class BasePresenter<V> {
 
 

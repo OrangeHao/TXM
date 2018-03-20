@@ -23,6 +23,7 @@ import butterknife.BindView;
 
 /**
  * created by czh on 2018-03-12
+ * 手势检查页
  */
 
 public class GestrueCheckFragment extends BaseFragment{

@@ -6,6 +6,9 @@ import android.os.Bundle;
 import com.txmpay.ewallet.R;
 import com.txmpay.ewallet.base.BaseActivity;
 
+/**
+ * 优惠券页
+ */
 public class CouponActivity extends BaseActivity {
 
     @Override

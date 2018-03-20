@@ -8,6 +8,10 @@ import com.txmpay.ewallet.base.BaseActivity;
 
 import butterknife.BindView;
 
+
+/**
+ * 图片查看页
+ */
 public class PhotoViewActivity extends BaseActivity {
 
     @BindView(R.id.photoView)

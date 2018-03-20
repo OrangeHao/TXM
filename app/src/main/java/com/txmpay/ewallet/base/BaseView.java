@@ -16,6 +16,10 @@
 
 package com.txmpay.ewallet.base;
 
+/**
+ * Mvp中view基类，可用可不用
+ * @param <T>
+ */
 public interface BaseView<T> {
 
     void setPresenter(T presenter);

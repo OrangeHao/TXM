@@ -18,6 +18,7 @@ import butterknife.ButterKnife;
 
 /**
  * created by czh on 2018-02-27
+ * activity基类
  */
 
 public abstract class BaseActivity<V,T extends BasePresenter> extends AppCompatActivity{

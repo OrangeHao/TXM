@@ -8,7 +8,7 @@
 /build
 /captures
 .externalNativeBuild
-build.gradle
+
 gradle/wrapper/gradle-wrapper.properties
 gradle.properties
-app/build.gradle
+

@@ -23,6 +23,9 @@ import butterknife.BindView;
 import butterknife.OnClick;
 import io.objectbox.Box;
 
+/**
+ * 创建手势页
+ */
 public class CreateGestureActivity extends BaseActivity {
 
     @BindView(R.id.lockPatterIndicator)

@@ -8,6 +8,8 @@ import io.objectbox.annotation.Id;
 
 /**
  * created by czh on 2018-03-12
+ * 用户设置数据库实体类，详细内容请访问Objectbox官方网站
+ * http://objectbox.io
  */
 
 @Entity

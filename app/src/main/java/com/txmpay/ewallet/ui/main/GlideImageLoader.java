@@ -8,6 +8,7 @@ import com.youth.banner.loader.ImageLoader;
 
 /**
  * created by czh on 2017-12-21
+ *
  */
 
 public class GlideImageLoader extends ImageLoader {
